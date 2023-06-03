@@ -45,4 +45,34 @@ public class PlayerControlls : MonoBehaviour
         transform.localScale = scale;
     }
 
+    public void InverseControlls()
+    {
+        KeyCode a = left;
+        KeyCode b = right;
+        KeyCode c = up;
+        KeyCode d = down;
+
+        left = b;
+        right = a;
+        up = d;
+        down = c;
+
+        Invoke("ReturnNormalControlls", 5f);
+    }
+
+    private void ReturnNormalControlls()
+    {
+        KeyCode a = left;
+        KeyCode b = right;
+        KeyCode c = up;
+        KeyCode d = down;
+
+        left = b;
+        right = a;
+        up = d;
+        down = c;
+
+
+    }
+
 }
