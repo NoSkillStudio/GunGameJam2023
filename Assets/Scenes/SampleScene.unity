@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 197872401}
   - component: {fileID: 197872400}
   - component: {fileID: 197872399}
-  - component: {fileID: 197872398}
+  - component: {fileID: 197872404}
   - component: {fileID: 197872403}
   m_Layer: 7
   m_Name: Player_2
@@ -144,19 +144,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &197872398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197872397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 488b467ed4dcc4c40bc4623b422639a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 3
 --- !u!58 &197872399
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -298,6 +285,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10248544014d2f5408e010a0b1466809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &197872404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197872397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0ca50af63ab8d34faf5ceecb5697df6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 2
+  targetCamera: {fileID: 0}
+  left: 276
+  right: 275
+  up: 273
+  down: 274
 --- !u!1 &222219026
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +383,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222219026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.49, y: 3.21, z: 0}
+  m_LocalPosition: {x: 1.62, y: 1.51, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -605,8 +610,8 @@ MonoBehaviour:
   - {fileID: 197872402}
   offset: {x: 0, y: 0, z: -10}
   smoothTime: 0.5
-  minZoom: 10
-  maxZoom: 100
+  minZoom: 2
+  maxZoom: 10
   zoomLimiter: 50
 --- !u!68 &519420034
 EdgeCollider2D:
@@ -750,6 +755,7 @@ GameObject:
   - component: {fileID: 1117942236}
   - component: {fileID: 1117942237}
   - component: {fileID: 1117942238}
+  - component: {fileID: 1117942239}
   m_Layer: 7
   m_Name: Player_1
   m_TagString: Untagged
@@ -844,7 +850,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117942230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.23, y: 2.8, z: 0}
+  m_LocalPosition: {x: 3.67, y: 2.8, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -865,6 +871,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 3
   targetCamera: {fileID: 0}
+  left: 97
+  right: 100
+  up: 119
+  down: 115
 --- !u!58 &1117942237
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -912,6 +922,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f62a0400357e214da488be11bea8863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1117942239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117942230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d76cf587852a1340ad7c8cc75730328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayDistance: 5
 --- !u!1 &1126163777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1004,7 +1027,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126163777}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.09, y: 4.19, z: 0}
+  m_LocalPosition: {x: 7.07, y: 3.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
