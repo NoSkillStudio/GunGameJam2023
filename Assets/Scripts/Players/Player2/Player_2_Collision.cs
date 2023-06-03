@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_2_Collision : MonoBehaviour
+public class Player_2_Collision : MonoBehaviour, IPlayer_2
 {
     private SpriteRenderer spriteRenderer;
     private void Start()

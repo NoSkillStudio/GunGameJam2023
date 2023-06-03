@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControlls : MonoBehaviour
 {
     public float Speed = 2;
-    private Rigidbody2D componentRigidbody;
+    private Rigidbody2D rigidbody2d;
     private bool isFasingRight = true;
 
     [SerializeField] private KeyCode left;
@@ -15,22 +15,22 @@ public class PlayerControlls : MonoBehaviour
 
     private void Start()
     {
-        componentRigidbody = GetComponent<Rigidbody2D>();
+        rigidbody2d = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        componentRigidbody.velocity = Vector2.zero;
-        if (Input.GetKey(left)) componentRigidbody.velocity += Vector2.left * Speed;
-        if (Input.GetKey(right)) componentRigidbody.velocity += Vector2.right * Speed;
-        if (Input.GetKey(up)) componentRigidbody.velocity += Vector2.up * Speed;
-        if (Input.GetKey(down)) componentRigidbody.velocity += Vector2.down * Speed;
+        rigidbody2d.velocity = Vector2.zero;
+        if (Input.GetKey(left)) rigidbody2d.velocity += Vector2.left * Speed;
+        if (Input.GetKey(right)) rigidbody2d.velocity += Vector2.right * Speed;
+        if (Input.GetKey(up)) rigidbody2d.velocity += Vector2.up * Speed;
+        if (Input.GetKey(down)) rigidbody2d.velocity += Vector2.down * Speed;
 
-        if (Input.GetKey(right) && !isFasingRight)
+        if (rigidbody2d.velocity.x > 0 && !isFasingRight)
         {
             Turn();
         }
-        else if (Input.GetKey(left) && isFasingRight)
+        else if (rigidbody2d.velocity.x < 0 && isFasingRight)
         {
             Turn();
         }
