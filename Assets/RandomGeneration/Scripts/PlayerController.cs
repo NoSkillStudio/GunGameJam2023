@@ -20,6 +20,10 @@ public class PlayerControllerastdfyfk : MonoBehaviour
     private bool isJumping;
     private bool doubleJump;
 
+    [SerializeField] private KeyCode left;
+    [SerializeField] private KeyCode right;
+    [SerializeField] private KeyCode jump;
+
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -31,7 +35,7 @@ public class PlayerControllerastdfyfk : MonoBehaviour
 
         isGrounded = Physics2D.OverlapCircle(groundPos.position, checkRadius, whatIsGround);
 
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.Z))
+        if (isGrounded == true && Input.GetKeyDown(jump))
         {
             anim.SetTrigger("takeOf");
             isJumping = true;
@@ -63,13 +67,13 @@ public class PlayerControllerastdfyfk : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.Z))
+        if (Input.GetKeyUp(jump))
         {
             isJumping = false;
 
         }
 
-        if (isGrounded == false && doubleJump == false && Input.GetKeyDown(KeyCode.Z)) {
+        if (isGrounded == false && doubleJump == false && Input.GetKeyDown(jump)) {
             isJumping = true;
             doubleJump = true;
             isJumping = true;

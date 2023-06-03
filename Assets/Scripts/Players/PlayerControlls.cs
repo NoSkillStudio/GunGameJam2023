@@ -71,8 +71,8 @@ public class PlayerControlls : MonoBehaviour
         right = a;
         up = d;
         down = c;
-
-
     }
+
+    public void SetPosition(Transform transform) => this.transform.position = transform.position;
 
 }
