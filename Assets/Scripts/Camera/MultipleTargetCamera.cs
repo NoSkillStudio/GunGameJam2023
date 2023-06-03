@@ -27,14 +27,14 @@ public class MultipleTargetCamera : MonoBehaviour
         if(targets.Count == 0)
             return; 
         Move();
-        Zoom();
+        //Zoom();
     }
 
-    private void Zoom()
-    {
-        float newZoom = Mathf.Lerp(minZoom, maxZoom, GetGreatestDistance() / zoomLimiter);
-        camera.fieldOfView = Mathf.Lerp(camera.fieldOfView, newZoom, Time.deltaTime);
-    }
+    //private void Zoom()
+    //{
+    //    float newZoom = Mathf.Lerp(minZoom, maxZoom, GetGreatestDistance() / zoomLimiter);
+    //    camera.fieldOfView = Mathf.Lerp(camera.fieldOfView, newZoom, Time.deltaTime);
+    //}
 
     private void Move()
     {
@@ -45,17 +45,17 @@ public class MultipleTargetCamera : MonoBehaviour
         transform.position = Vector3.SmoothDamp(transform.position, newPosition, ref velocity, smoothTime);
     }
 
-    private float GetGreatestDistance()
-    {
-        var bounds = new Bounds(targets[0].position, Vector3.zero);
+    //private float GetGreatestDistance()
+    //{
+    //    var bounds = new Bounds(targets[0].position, Vector3.zero);
 
-        for (int i = 0; i < targets.Count; i++)
-        {
-            bounds.Encapsulate(targets[i].position);
-        }
+    //    for (int i = 0; i < targets.Count; i++)
+    //    {
+    //        bounds.Encapsulate(targets[i].position);
+    //    }
 
-        return bounds.size.x;
-    }
+    //    return bounds.size.x;
+    //}
 
     public Vector3 GetBoundsSize()
     {

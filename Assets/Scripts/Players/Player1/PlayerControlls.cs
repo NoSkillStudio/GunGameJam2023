@@ -7,8 +7,6 @@ public class PlayerControlls : MonoBehaviour
     public float Speed = 2;
     private Rigidbody2D componentRigidbody;
     private bool isFasingRight = true;
-    private Camera camera;
-    [SerializeField] private MultipleTargetCamera targetCamera;
 
     [SerializeField] private KeyCode left;
     [SerializeField] private KeyCode right;
@@ -47,8 +45,4 @@ public class PlayerControlls : MonoBehaviour
         transform.localScale = scale;
     }
 
-    //private void CheckBoundaries()
-    //{ 
-    //if(transform.position.x > targetCamera.GetBoundsSize().x)
-    //}
 }
