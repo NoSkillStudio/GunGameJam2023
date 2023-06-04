@@ -201,7 +201,7 @@ MonoBehaviour:
   rayDistance: 5
   detectedPlayerFront: {fileID: 0}
   detectedPlayerBack: {fileID: 0}
-  castPoint: {fileID: 0}
+  castPoint: {fileID: 513270700779716309}
 --- !u!114 &7788519366755408848
 MonoBehaviour:
   m_ObjectHideFlags: 0
