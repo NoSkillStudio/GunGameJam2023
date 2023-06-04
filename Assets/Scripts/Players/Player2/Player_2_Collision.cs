@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_2_Collision : PlayerCollision, IPlayer_2
 {
     private SpriteRenderer spriteRenderer;
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();

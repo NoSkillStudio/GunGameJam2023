@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -77,16 +75,9 @@ public class CharacterController2D : MonoBehaviour
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl)
         {
-
             // If crouching
-
-
-
-                // Reduce the speed by the crouchSpeed multiplier
-                move *= m_CrouchSpeed;
-
-                // Disable one of the colliders when crouching
-
+            // Reduce the speed by the crouchSpeed multiplier
+            move *= m_CrouchSpeed;
 
             // Move the character by finding the target velocity
             Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
@@ -106,6 +97,7 @@ public class CharacterController2D : MonoBehaviour
                 Flip();
             }
         }
+
         // If the player should jump...
         if (m_Grounded && jump)
         {
@@ -126,8 +118,4 @@ public class CharacterController2D : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
-
-
-
-
 }

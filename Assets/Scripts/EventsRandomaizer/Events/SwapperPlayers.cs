@@ -1,16 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SwapperPlayers : MonoBehaviour
 {
     [SerializeField] private GameObject player_1;
     [SerializeField] private GameObject player_2;
-    private Vector3 buffer;
-
-
     [SerializeField] private PlayerControlls playerControlls_1;
     [SerializeField] private PlayerControlls playerControlls_2;
+    private Vector3 buffer;
 
     public void SwapPlayers()
     {
