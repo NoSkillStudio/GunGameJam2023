@@ -3,6 +3,7 @@ using UnityEngine;
 public class Player_1_Collision : PlayerCollision, IPLayer_1
 {
 	private SpriteRenderer spriteRenderer;
+    private bool isFlagGrabbed = false;
 
 	private void Start()
 	{
@@ -17,7 +18,28 @@ public class Player_1_Collision : PlayerCollision, IPLayer_1
         
         if (collision.gameObject.TryGetComponent(out Finish finish))
             Destroy(finish.gameObject);
-            print("Player 1 wins");
+
+        if (!isFlagGrabbed && collision.gameObject.TryGetComponent(out Flag flag))
+        {
+            print("Player1");
+            print(flag.owner);
+            if (flag.owner != 1)
+            {
+                print("Player 1 grabs the flag!");
+                flag.Grab();
+                isFlagGrabbed = true;
+            }
+        }
+
+        if (isFlagGrabbed && collision.gameObject.TryGetComponent(out FlagStand stand))
+        {
+            print(stand.owner);
+            if (stand.owner == 1)
+            {
+                print("Player 1 wins!");
+                // do restart
+            }
+        }
 	}
 
     private void OnTriggerExit2D(Collider2D collision)
