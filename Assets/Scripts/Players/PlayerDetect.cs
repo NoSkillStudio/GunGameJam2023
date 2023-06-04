@@ -29,11 +29,11 @@ public class PlayerDetect : MonoBehaviour
 
         if (hit.gameObject == detectedPlayerBack)
         {
-            Debug.Log(detectedPlayerFront.name + " is found!");
+            //Debug.Log(detectedPlayerFront.name + " is found!");
         }
         if (hit.gameObject == detectedPlayerFront)
         {
-            Debug.Log("drawn game");
+            //Debug.Log("drawn game");
         }
         
 

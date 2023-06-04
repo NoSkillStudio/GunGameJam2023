@@ -12,6 +12,7 @@ public class EventsRandomaizer_1 : MonoBehaviour
     private UnityEvent GetRandomEvent()
 	{
         index = Random.Range(0, events.Length);
+		//index = 8;
 		currentEvent = events[index];
 		Debug.Log(index);
 		return currentEvent;

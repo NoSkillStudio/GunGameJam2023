@@ -6,7 +6,7 @@ public class Player_2_Collision : PlayerCollision, IPlayer_2
 
     private void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     protected override void OnTriggerEnter2D(Collider2D collision)
