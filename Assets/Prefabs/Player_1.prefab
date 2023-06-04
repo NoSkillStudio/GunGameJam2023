@@ -243,9 +243,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b662133db8751d4f8da044642d363ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contoller: {fileID: 7788519366755408848}
-  runSpeed: 40
+  controller: {fileID: 7788519366755408848}
   jumpKey: 119
+  runSpeed: 40
 --- !u!1 &2219195151684661755
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,9 +5,9 @@ public class EventsRandomaizer_1 : MonoBehaviour
 {
 	[SerializeField] private UnityEvent[] events;
 	private UnityEvent currentEvent;
-    int index;
+    private int index;
 
-	public void ActiveRandomEvent() => GetRandomEvent().Invoke();
+	public void ActiveRandomEvent() => GetRandomEvent()?.Invoke();
 
     private UnityEvent GetRandomEvent()
 	{

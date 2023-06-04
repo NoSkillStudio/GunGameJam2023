@@ -325,12 +325,11 @@ MonoBehaviour:
   m_JumpForce: 400
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.05
-  m_AirControl: 0
+  m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 0
-  m_GroundCheck: {fileID: 0}
-  m_CrouchDisableCollider: {fileID: 0}
+    m_Bits: 512
+  m_GroundCheck: {fileID: 1828325799687280024}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -352,9 +351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bea434df23ba66040a277621f4499e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contoller: {fileID: 8003521911073190569}
+  controller: {fileID: 8003521911073190569}
+  jumpKey: 273
   runSpeed: 40
-  jumpKey: 0
 --- !u!1 &7402006916183449717
 GameObject:
   m_ObjectHideFlags: 0

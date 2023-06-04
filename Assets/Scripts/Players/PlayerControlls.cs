@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerControlls : MonoBehaviour
 {
     public float Speed = 2;
-    private Rigidbody2D rigidbody2d;
+    private Rigidbody2D rb;
     private bool isFasingRight = true;
 
     [SerializeField] private KeyCode left;
@@ -15,22 +15,19 @@ public class PlayerControlls : MonoBehaviour
 
     private void Start()
     {
-        rigidbody2d = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
     {
-        rigidbody2d.velocity = Vector2.zero;
-        if (Input.GetKey(left)) rigidbody2d.velocity += Vector2.left * Speed;
-        if (Input.GetKey(right)) rigidbody2d.velocity += Vector2.right * Speed;
-        if (Input.GetKey(up)) rigidbody2d.velocity += Vector2.up * Speed;
-        if (Input.GetKey(down)) rigidbody2d.velocity += Vector2.down * Speed;
+        rb.velocity = Vector2.zero;
+        if (Input.GetKey(left)) rb.velocity += Vector2.left * Speed;
+        if (Input.GetKey(right)) rb.velocity += Vector2.right * Speed;
+        if (Input.GetKey(up)) rb.velocity += Vector2.up * Speed;
+        if (Input.GetKey(down)) rb.velocity += Vector2.down * Speed;
 
-        if (rigidbody2d.velocity.x > 0 && !isFasingRight)
-        {
-            Turn();
-        }
-        else if (rigidbody2d.velocity.x < 0 && isFasingRight)
+        if ((rb.velocity.x > 0 && !isFasingRight) ||
+            (rb.velocity.x < 0 && isFasingRight))
         {
             Turn();
         }
@@ -57,7 +54,7 @@ public class PlayerControlls : MonoBehaviour
         up = d;
         down = c;
 
-        Invoke("ReturnNormalControlls", 5f);
+        Invoke(nameof(ReturnNormalControlls), 5f);
     }
 
     private void ReturnNormalControlls()
@@ -74,5 +71,4 @@ public class PlayerControlls : MonoBehaviour
     }
 
     public void SetPosition(Transform transform) => this.transform.position = transform.position;
-
 }

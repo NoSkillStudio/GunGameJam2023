@@ -1270,10 +1270,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1037452644419832945, guid: 9d6333aa4226a3d4e84371d2429b110f, type: 3}
-      propertyPath: m_GravityScale
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3806800348248564470, guid: 9d6333aa4226a3d4e84371d2429b110f, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1302,10 +1298,6 @@ PrefabInstance:
       propertyPath: detectedPlayerFront
       value: 
       objectReference: {fileID: 544872119}
-    - target: {fileID: 6860550986675173069, guid: 9d6333aa4226a3d4e84371d2429b110f, type: 3}
-      propertyPath: jumpKey
-      value: 273
-      objectReference: {fileID: 0}
     - target: {fileID: 6860550986675173069, guid: 9d6333aa4226a3d4e84371d2429b110f, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1357,22 +1349,6 @@ PrefabInstance:
     - target: {fileID: 8003521911073190569, guid: 9d6333aa4226a3d4e84371d2429b110f, type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8003521911073190569, guid: 9d6333aa4226a3d4e84371d2429b110f, type: 3}
-      propertyPath: m_JumpForce
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 8003521911073190569, guid: 9d6333aa4226a3d4e84371d2429b110f, type: 3}
-      propertyPath: m_AirControl
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8003521911073190569, guid: 9d6333aa4226a3d4e84371d2429b110f, type: 3}
-      propertyPath: m_GroundCheck
-      value: 
-      objectReference: {fileID: 1662715230}
-    - target: {fileID: 8003521911073190569, guid: 9d6333aa4226a3d4e84371d2429b110f, type: 3}
-      propertyPath: m_WhatIsGround.m_Bits
-      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2745,11 +2721,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7d58969f88c3a3428805db90c019947, type: 3}
---- !u!4 &1662715230 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1828325799687280024, guid: 9d6333aa4226a3d4e84371d2429b110f, type: 3}
-  m_PrefabInstance: {fileID: 956722895}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1748824906
 GameObject:
   m_ObjectHideFlags: 0
@@ -3712,7 +3683,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.094863
+  orthographic size: 2.096173
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
