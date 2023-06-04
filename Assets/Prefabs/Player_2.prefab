@@ -306,7 +306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d76cf587852a1340ad7c8cc75730328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayDistance: 10
+  rayDistance: 5
   detectedPlayerFront: {fileID: 0}
   detectedPlayerBack: {fileID: 0}
   castPoint: {fileID: 6343626516980643569}
