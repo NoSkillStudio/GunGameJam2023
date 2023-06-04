@@ -17,28 +17,17 @@ public class PressurePlate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out IPlayer player))
-        {
-            transform.DOMoveY(transform.position.y - offset, pressTime);
-        }
 
         if (collision.gameObject.TryGetComponent(out IPLayer_1 pLayer_1))
         { 
             OnPressedByPlayer_1?.Invoke();
+            Destroy(gameObject);
         }
 
         if (collision.gameObject.TryGetComponent(out IPlayer_2 pLayer_2))
         {
             OnPressedByPlayer_2?.Invoke();
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.TryGetComponent(out IPlayer player))
-        {
-            collider2D.enabled = false;
-            transform.DOMoveY(transform.position.y + offset, pressTime);
+            Destroy(gameObject);
         }
     }
 }
