@@ -57,7 +57,7 @@ public class PlayerControlls : MonoBehaviour
         Invoke(nameof(ReturnNormalControlls), 5f);
     }
 
-    private void ReturnNormalControlls()
+    public void ReturnNormalControlls()
     {
         KeyCode a = left;
         KeyCode b = right;
