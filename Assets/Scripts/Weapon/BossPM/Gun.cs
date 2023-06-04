@@ -14,6 +14,9 @@ public class Gun : WeaponBase
     [SerializeField] private float rechargeTime = 10f;
 
     [SerializeField] private KeyCode fire;
+
+    [SerializeField] private AudioSource shotSound;
+    [SerializeField] private AudioSource rechargeSound;
     private void Update()
     {
         if (canShoot)
@@ -40,6 +43,7 @@ public class Gun : WeaponBase
             RechargeMagazine();
         }
         //BulletActivate(firePoint, transform);
+        shotSound.Play();
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
@@ -47,6 +51,7 @@ public class Gun : WeaponBase
     {
         canShoot = false;
         bulletsInMagazine = 25;
+        rechargeSound.Play();
         Invoke("ActiveShoot", rechargeTime);
     }
 
