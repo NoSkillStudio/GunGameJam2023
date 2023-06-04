@@ -6,7 +6,7 @@ public class PlayerControlls : MonoBehaviour
 {
     public float Speed = 2;
     private Rigidbody2D rb;
-    private bool isFasingRight = true;
+
 
     [SerializeField] private KeyCode left;
     [SerializeField] private KeyCode right;
@@ -26,20 +26,7 @@ public class PlayerControlls : MonoBehaviour
         if (Input.GetKey(up)) rb.velocity += Vector2.up * Speed;
         if (Input.GetKey(down)) rb.velocity += Vector2.down * Speed;
 
-        if ((rb.velocity.x > 0 && !isFasingRight) ||
-            (rb.velocity.x < 0 && isFasingRight))
-        {
-            Turn();
-        }
-    }
 
-    private void Turn()
-    {
-        isFasingRight = !isFasingRight;
-
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
     }
 
     public void InverseControlls()
@@ -57,7 +44,7 @@ public class PlayerControlls : MonoBehaviour
         Invoke(nameof(ReturnNormalControlls), 5f);
     }
 
-    private void ReturnNormalControlls()
+    public void ReturnNormalControlls()
     {
         KeyCode a = left;
         KeyCode b = right;
