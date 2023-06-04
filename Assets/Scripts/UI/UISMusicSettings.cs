@@ -1,12 +1,9 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class UISoundSettings : MonoBehaviour
+public class UISMusicSettings : MonoBehaviour
 {
 	[SerializeField] private Toggle toggleMusic;
 	[SerializeField] private Slider sliderVolumeMusic;

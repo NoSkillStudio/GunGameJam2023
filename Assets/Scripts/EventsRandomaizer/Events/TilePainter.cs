@@ -1,16 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class TilePainter : MonoBehaviour
 {
-	private void Start()
-	{
-		
-	}
+	[SerializeField] private Tile paintTile;
+	[SerializeField] private Tilemap tilemap;
 
-	private void Update()
-	{
-		
+	[ContextMenu("Paint")]
+
+	public void Paint(Vector3 position)
+	{ 
+	
 	}
 }
