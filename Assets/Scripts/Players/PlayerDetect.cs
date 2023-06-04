@@ -49,6 +49,7 @@ public class PlayerDetect : MonoBehaviour
     {
         if (castPoint == null)
             return;
+
         Gizmos.DrawCube(castPoint.position, new Vector2(rayDistance, 0.2f));
     }
 }
