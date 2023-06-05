@@ -9,6 +9,8 @@ public class PlayerMovement_1 : MonoBehaviour
     float horizontalMove = 0f;
     public float runSpeed = 40f;
     private bool jump = false;
+
+    
     // bool crouch = false;
 
     void Update()
@@ -17,6 +19,7 @@ public class PlayerMovement_1 : MonoBehaviour
 
         if (Input.GetKeyDown(jumpKey))
         {
+            
             jump = true;
         }
     }

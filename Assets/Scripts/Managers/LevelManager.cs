@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour
     public void ReloadScene()
     {
         SceneManager.LoadScene(sceneIndex);
+        Time.timeScale = 1f;
     }
 
     public void NextLevel()

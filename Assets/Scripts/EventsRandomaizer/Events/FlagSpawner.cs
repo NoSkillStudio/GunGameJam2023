@@ -9,11 +9,13 @@ public class FlagSpawner : MonoBehaviour
     private Transform player_1;
     private Transform player_2;
 
+    [SerializeField] private Vector2 offset;
+
     private void Start()
     {
         player_1 = FindObjectOfType<Player_1_Collision>().transform;
         player_2 = FindObjectOfType<Player_2_Collision>().transform;
-        Spawn();
+        //Spawn();
     }
 
     public void Spawn()
@@ -24,9 +26,9 @@ public class FlagSpawner : MonoBehaviour
 
         // First flag
         Instantiate(firstflag, player_1_pos, Quaternion.identity);
-        Instantiate(firstflagstand, player_1_pos - new Vector2(0.15f, 0.25f), Quaternion.identity);
+        Instantiate(firstflagstand, player_1_pos - offset, Quaternion.identity);
         // Second flag
         Instantiate(secondflag, player_2_pos, Quaternion.identity);
-        Instantiate(secondflagstand, player_2_pos - new Vector2(0.15f, 0.25f), Quaternion.identity);
+        Instantiate(secondflagstand, player_2_pos - offset, Quaternion.identity);
     }
 }

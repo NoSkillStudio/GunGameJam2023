@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerDetect : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PlayerDetect : MonoBehaviour
     private bool isFacingRight = true;
     private Rigidbody2D rb;
     private float castDistance;
+
+    [SerializeField] private UnityEvent OnWin;
+    [SerializeField] private UnityEvent OnDraw;
 
     private void Start()
     {
@@ -35,11 +39,11 @@ public class PlayerDetect : MonoBehaviour
         {
             if (hit.gameObject == detectedPlayerBack)
             {
-                Debug.Log(detectedPlayerFront.name + " is found!");
+                OnWin.Invoke();
             }
             if (hit.gameObject == detectedPlayerFront)
             {
-                Debug.Log("drawn game");
+                OnDraw.Invoke();
             }
             }
         catch { }

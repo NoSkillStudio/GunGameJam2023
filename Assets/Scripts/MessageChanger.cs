@@ -1,16 +1,12 @@
-using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class MessageChanger : MonoBehaviour
 {
-    private Animator anim;
-    private Text textComponent;
+    [SerializeField] private Animator anim;
+    [SerializeField] private TMP_Text textComponent;
 
-    private void Start()
-    {
-        anim = GetComponent<Animator>();
-        textComponent = GetComponent<Text>();
-    }
+    [SerializeField] private GameObject endPanel;
 
     public void AddGoal(string goal)
     {
@@ -18,16 +14,24 @@ public class MessageChanger : MonoBehaviour
         anim.SetTrigger("OpenAndClose");
     }
 
+    public void RemoveGoal(string goal)
+    {
+        textComponent.text = "Минус одна цель: " + goal;
+        anim.SetTrigger("OpenAndClose");
+    }
+
     public void FirstPlayerCompletedGoal(string goal)
     {
         textComponent.text = "Первый игрок выполнил цель: " + goal;
         anim.SetTrigger("OpenAndClose");
+        InvokeEnd();
     }
 
     public void SecondPlayerCompletedGoal(string goal)
     {
         textComponent.text = "Второй игрок выполнил цель: " + goal;
         anim.SetTrigger("OpenAndClose");
+        InvokeEnd();
     }
 
     public void ChangeGameRuleForFirstPlayer(string rule)
@@ -53,4 +57,12 @@ public class MessageChanger : MonoBehaviour
         textComponent.text = message;
         anim.SetTrigger("OpenAndClose");
     }
+
+    public void End()
+    {
+        endPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void InvokeEnd() => Invoke("End", 2.11f);
 }

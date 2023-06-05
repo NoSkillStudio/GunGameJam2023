@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -13,6 +14,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 	private bool can = false;
 	private int oldHealth;
 
+	[SerializeField] private UnityEvent OnDie;
 
     private void Start()
 	{
@@ -45,7 +47,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
 	public void Die()
 	{
+		OnDie.Invoke();
 		_alive = false;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

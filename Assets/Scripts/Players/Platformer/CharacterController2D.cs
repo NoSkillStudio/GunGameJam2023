@@ -31,7 +31,7 @@ public class CharacterController2D : MonoBehaviour
     [SerializeField] private BoolEvent OnCrouchEvent;
     [SerializeField] private BoolEvent OnFallEvent;
 
-
+    [SerializeField] private AudioSource jumpSound;
     private void Awake()
     {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -98,6 +98,7 @@ public class CharacterController2D : MonoBehaviour
         // If the player should jump...
         if (m_Grounded && jump)
         {
+            jumpSound.Play();
             // Add a vertical force to the player.
             m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
