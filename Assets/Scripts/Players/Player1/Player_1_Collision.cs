@@ -24,7 +24,7 @@ public class Player_1_Collision : PlayerCollision, IPLayer_1
         
         if (collision.gameObject.TryGetComponent(out Finish finish))
         {
-            OnFinishWin.Invoke();
+            OnFinishWin?.Invoke();
 
             Destroy(finish.gameObject);
         }
@@ -37,7 +37,7 @@ public class Player_1_Collision : PlayerCollision, IPLayer_1
             if (flag.owner != 1)
             {
                 //print("Player 1 grabs the flag!");
-                OnGarabFlag.Invoke();
+                OnGarabFlag?.Invoke();
                 flag.Grab();
                 isFlagGrabbed = true;
             }

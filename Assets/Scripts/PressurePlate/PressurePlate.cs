@@ -18,7 +18,7 @@ public class PressurePlate : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (collision.gameObject.TryGetComponent(out IPlayer_2 pLayer_2))
+        else if (collision.gameObject.TryGetComponent(out IPlayer_2 pLayer_2))
         {
             FindObjectOfType<EventsRandomaizer_2>().ActiveRandomEvent();
             FindObjectOfType<PillSpawner>().Spawn();

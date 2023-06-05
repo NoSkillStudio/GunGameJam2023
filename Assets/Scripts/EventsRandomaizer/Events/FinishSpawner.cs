@@ -4,23 +4,29 @@ public class FinishSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject finish_prefab;
     [SerializeField] private Transform[] points;
-    //[SerializeField] private Vector2 a;
-    //[SerializeField] private Vector2 b;
+    [SerializeField] private float minDistance;
+    private Transform player1;
+    private Transform player2;
 
-    //#if UNITY_EDITOR
-    //private void OnDrawGizmosSelected()
-    //{
-    //    Gizmos.color = Color.red;
-    //    Gizmos.DrawSphere(a, 0.25f);
-    //    Gizmos.DrawSphere(b, 0.25f);
-    //}
-    //#endif
+    private void Start()
+    {
+        player1 = FindObjectOfType<Player_1_Collision>().transform;
+        player2 = FindObjectOfType<Player_2_Collision>().transform;
+    }
 
     public void Spawn()
     {
-        //Vector2 pos = new Vector2(Random.Range(a.x, b.x), Random.Range(a.y, b.y));
-
-        Instantiate(finish_prefab, GetRandomTransform().position, Quaternion.identity);
+        Vector2 p1 = player1.position;
+        Vector2 p2 = player2.position;
+        Vector2 pos;
+        do
+        {
+            pos = GetRandomTransform().position;
+        } while(
+            Vector2.Distance(pos, p1) < minDistance
+            || Vector2.Distance(pos, p2) < minDistance
+        );
+        Instantiate(finish_prefab, pos, Quaternion.identity);
     }
 
     private Transform GetRandomTransform()
