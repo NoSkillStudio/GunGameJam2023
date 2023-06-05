@@ -9,6 +9,7 @@ public class PlayerMovement_2 : MonoBehaviour
     private bool jump = false;
     // private bool crouch = false;
 
+
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("ArrowHorizontal") * runSpeed;

@@ -5,6 +5,8 @@ public class Bullet : MonoBehaviour
 	[SerializeField] protected float speed;
 	[SerializeField] protected Rigidbody2D rb;
 
+    [SerializeField] private AudioSource audioSource;
+
     public int Damage;
 
     private void FixedUpdate()
@@ -31,6 +33,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out IDamageable damageable))
         {
+            audioSource.Play();
             damageable.ApplyDamage(Damage);
             //Deactivate();
         }

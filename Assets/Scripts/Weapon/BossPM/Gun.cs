@@ -37,13 +37,13 @@ public class Gun : WeaponBase
 
     protected override void Shoot()
     {
+        shotSound.Play();
         bulletsInMagazine--;
         if (bulletsInMagazine <= 1)
         {
             RechargeMagazine();
         }
         //BulletActivate(firePoint, transform);
-        shotSound.Play();
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
