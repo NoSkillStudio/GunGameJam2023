@@ -4,16 +4,20 @@ using UnityEngine.Events;
 public class PlayerDetect : MonoBehaviour
 {
     [SerializeField] private float rayDistance = 3f;
-    [SerializeField] private GameObject detectedPlayerFront;
-    [SerializeField] private GameObject detectedPlayerBack;
+
+    [SerializeField] private GameObject detectedPlayer;
+    [SerializeField] private GameObject tilemap;
     [SerializeField] private Transform castPoint;
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
     private Rigidbody2D rb;
     private float castDistance;
 
     [SerializeField] private UnityEvent OnWin;
     [SerializeField] private UnityEvent OnDraw;
 
+    [SerializeField] private LayerMask layerMask;
+
+    private bool canDetect = true;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,24 +33,35 @@ public class PlayerDetect : MonoBehaviour
         castDistance = rayDistance;
         if (!isFacingRight) castDistance = -rayDistance;
 
-        Collider2D hit = Physics2D.OverlapBox(
-            castPoint.position,
-            new Vector2(rayDistance, 0.2f),
-            0
-        );
+        Collider2D hit;
 
-        try // без try catch ошибка NullReferenceException
+        if (canDetect)
         {
-            if (hit.gameObject == detectedPlayerBack)
+            hit = Physics2D.OverlapBox(castPoint.position, new Vector2(rayDistance, 0.2f), 0, layerMask);
+
+
+
+            if (hit != null)
             {
-                OnWin.Invoke();
+                Debug.Log(hit.gameObject.name);
+
+                if (hit.gameObject == detectedPlayer)
+                {
+                    canDetect = false;
+                    if (isFacingRight && detectedPlayer.GetComponent<PlayerDetect>().isFacingRight) OnWin.Invoke();
+                    if (isFacingRight == false && detectedPlayer.GetComponent<PlayerDetect>().isFacingRight == false) OnWin.Invoke();
+
+                    if (isFacingRight && detectedPlayer.GetComponent<PlayerDetect>().isFacingRight == false) OnDraw.Invoke();
+                    if (isFacingRight == false && detectedPlayer.GetComponent<PlayerDetect>().isFacingRight) OnDraw.Invoke();
+                }
+
+                else if (hit.gameObject == tilemap.gameObject) return;
             }
-            if (hit.gameObject == detectedPlayerFront)
-            {
-                OnDraw.Invoke();
-            }
-            }
-        catch { }
+
+        }
+
+
+
     }
 
     private void OnDrawGizmosSelected()
