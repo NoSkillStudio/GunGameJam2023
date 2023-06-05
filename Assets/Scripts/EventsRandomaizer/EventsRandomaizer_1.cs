@@ -14,7 +14,7 @@ public class EventsRandomaizer_1 : MonoBehaviour
         index = Random.Range(0, events.Length);
 		//index = 5;
 		currentEvent = events[index];
-		Debug.Log(index);
+		//Debug.Log(index);
 		return currentEvent;
     }
 }

@@ -13,7 +13,6 @@ public class PlayerCollision : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out PressurePlate player))
         {
             eatSound.Play();
-            Debug.Log("eatSound");
         }
 
     }
