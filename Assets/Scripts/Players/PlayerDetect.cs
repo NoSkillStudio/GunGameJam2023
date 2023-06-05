@@ -43,7 +43,7 @@ public class PlayerDetect : MonoBehaviour
 
             if (hit != null)
             {
-                Debug.Log(hit.gameObject.name);
+                //Debug.Log(hit.gameObject.name);
 
                 if (hit.gameObject == detectedPlayer)
                 {

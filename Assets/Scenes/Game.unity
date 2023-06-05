@@ -2052,6 +2052,34 @@ MonoBehaviour:
             \u0432\u0442\u043E\u0440\u043E\u0439 \u0438\u0433\u0440\u043E\u043A"
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 866248920}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "\u043D\u0430\u0439\u0442\u0438 \u0432\u0442\u043E\u0440\u043E\u0433\u043E
+            \u0438\u0433\u0440\u043E\u043A\u0430. \u041F\u043E\u0431\u0435\u0434\u0438\u043B
+            \u0432\u0442\u043E\u0440\u043E\u0439 \u0438\u0433\u0440\u043E\u043A"
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1524166679}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "\u043D\u0430\u0439\u0442\u0438 \u0432\u0442\u043E\u0440\u043E\u0433\u043E
+            \u0438\u0433\u0440\u043E\u043A\u0430. \u041F\u043E\u0431\u0435\u0434\u0438\u043B
+            \u0432\u0442\u043E\u0440\u043E\u0439 \u0438\u0433\u0440\u043E\u043A"
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDraw:
     m_PersistentCalls:
       m_Calls:
@@ -2072,6 +2100,32 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: MessageChanger, Assembly-CSharp
         m_MethodName: InvokeEnd
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "\u041D\u0438\u0447\u044C\u044F! \u041D\u0438\u043A\u0442\u043E
+            \u043D\u0435 \u0432\u044B\u0438\u0433\u0440\u0430\u043B"
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 866248920}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "\u041D\u0438\u0447\u044C\u044F! \u041D\u0438\u043A\u0442\u043E
+            \u043D\u0435 \u0432\u044B\u0438\u0433\u0440\u0430\u043B"
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1524166679}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4728,6 +4782,34 @@ MonoBehaviour:
             \u043F\u0435\u0440\u0432\u044B\u0439 \u0438\u0433\u0440\u043E\u043A"
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 866248920}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "\u043D\u0430\u0439\u0442\u0438 \u043F\u0435\u0440\u0432\u043E\u0433\u043E
+            \u0438\u0433\u0440\u043E\u043A\u0430. \u041F\u043E\u0431\u0435\u0434\u0438\u043B
+            \u043F\u0435\u0440\u0432\u044B\u0439 \u0438\u0433\u0440\u043E\u043A"
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1524166679}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "\u043D\u0430\u0439\u0442\u0438 \u043F\u0435\u0440\u0432\u043E\u0433\u043E
+            \u0438\u0433\u0440\u043E\u043A\u0430. \u041F\u043E\u0431\u0435\u0434\u0438\u043B
+            \u043F\u0435\u0440\u0432\u044B\u0439 \u0438\u0433\u0440\u043E\u043A"
+          m_BoolArgument: 0
+        m_CallState: 2
   OnDraw:
     m_PersistentCalls:
       m_Calls:
@@ -4748,6 +4830,32 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: MessageChanger, Assembly-CSharp
         m_MethodName: InvokeEnd
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "\u041D\u0438\u0447\u044C\u044F! \u041D\u0438\u043A\u0442\u043E
+            \u043D\u0435 \u043F\u043E\u0431\u0435\u0434\u0438\u043B"
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 866248920}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "\u041D\u0438\u0447\u044C\u044F! \u041D\u0438\u043A\u0442\u043E
+            \u043D\u0435 \u043F\u043E\u0431\u0435\u0434\u0438\u043B"
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1524166679}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
